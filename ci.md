@@ -2,12 +2,16 @@
 
 Step1: build-genreal settings
 
+![alt text](https://github.com/WINNIE779/studyNote/blob/add-study-note/Pasted%20Graphic%202.png)
+
 1、Name:ZZZ （为子文件夹的命名）
 2、Build configuration ID：XX_Abc_ZZZ (为 build 文件夹下 name 的命名 ID)
 3、Publish artifacts:Even if build fails (为默认选项，用于设置推送 build 产物到服务器的条件)
 4、Artifact paths:Build/output/\*.nupkg (固定配置，用于设置 build 产出的路径)
 
 Step2:Edit- VCSeeting Root：
+
+![Alt text](<Edit VCS Root.png>)
 ￼
 
 1、Type of VCS: 选择 Git；
@@ -25,8 +29,6 @@ Add build step 7part：
 （runner type：Docker、step name：Docker login（此步驟的名稱）、Docker command：select：other、command name：login）
 
 ￼
-
-![alt text](https://github.com/WINNIE779/studyNote/blob/add-study-note/Pasted%20Graphic%202.png)
 
 2、Docker Build Image：
 
