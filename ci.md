@@ -26,7 +26,7 @@ Add build step 7part：
 
 ￼
 
-![alt text](Pasted Graphic 2.png)
+![alt text](https://github.com/WINNIE779/studyNote/blob/add-study-note/Pasted%20Graphic%202.png)
 
 2、Docker Build Image：
 
