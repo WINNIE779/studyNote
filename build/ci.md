@@ -7,7 +7,7 @@ Step1: build-genreal settings
 3、Publish artifacts:Even if build fails (为默认选项，用于设置推送 build 产物到服务器的条件)
 4、Artifact paths:Build/output/\*.nupkg (固定配置，用于设置 build 产出的路径)
 
-![alt text](https://github.com/WINNIE779/studyNote/blob/add-study-note/Pasted%20Graphic%202.png)
+![Alt text](<Pasted Graphic 2-1.png>)
 
 Step2:Edit- VCSeeting Root：
 
