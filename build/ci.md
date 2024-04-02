@@ -29,7 +29,7 @@ Add build step 7part：
 
 （runner type：Docker、step name：Docker login（此步驟的名稱）、Docker command：select：other、command name：login）
 
-![Alt text](/Users/xiaoxiaoman/Documents/GitHub/studyNote/build/ci-image/Docker login 19.png)
+![Alt text](<Docker login 19.png>)
 ￼
 
 2、Docker Build Image（建立镜像）：
