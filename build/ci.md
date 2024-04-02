@@ -25,14 +25,14 @@ Add build step 7part：
 
 ![Alt text](<Pasted Graphic 10.jpg>)
 
-1、Docker login：
+1、Docker login（镜像登陆）：
 
 （runner type：Docker、step name：Docker login（此步驟的名稱）、Docker command：select：other、command name：login）
 
 ![Alt text](<Docker login 19.png>)
 ￼
 
-2、Docker Build Image：
+2、Docker Build Image（建立镜像）：
 
 Docker Build Image 与 Docker Push Image 的区别在于 Custom script 的参数不一样，如：
 
@@ -45,25 +45,25 @@ docker build -f Dockerfile -t %docker.registry%/solar/practise4travis:$repositor
 
 ￼![Alt text](<Buid Step (2 of 7) Dockor Build imago.jpg>)
 
-3、Docker Push Image
+3、Docker Push Image（推送镜像）
 
 (1)参数为：repository=`echo %build.number%|sed ’s/+/-/g’`
 
 (2)參數為：docker push %docker.registry%/solar/practise4winnie:$repository
 
-4、Docker Remove
+4、Docker Remove（移除镜像）
 
 与前两者一样也是在 Custom script 的参数有区别：
 (1)repository=`echo %build.number%|sed ’s/+/-/g’`
 
 (2)docker rmi %docker.registry%/solar/practise4travis:$repository
 
-5、GitVersion
+5、GitVersion（项目版本号）
 
 set the GitVersion - Custom script：
 gitversion /output buildserver /updateassemblyinfo true
 
-6、Install Dependencies
+6、Install Dependencies（依赖打包）
 
 set the Install Dependencies - working directory-web - Custom script - npm install
 
