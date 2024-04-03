@@ -4,13 +4,15 @@ vite+react+taildwind+ts
 
 Step1:
 
-1、创建项目（创建最新版本的 vite- create）
+1、创建项目（创建最新版本的 vite- create）[命令 1 和命令 2 同时执行的话，会导致项目中多包涵了个项目]
 
-npm create vite@latest react-ts -- --template react-ts
+命令 1: npm create vite@latest react-ts -- --template react-ts
 
-2、由于新版本无法使用 yarn，需创建 2.8.0 的 vite
+或
 
-npm init vite@2.8.0
+由于新版本无法使用 yarn，需创建 2.8.0 的 vite（命令 2 的话需要自己设定 project name、react、react-ts 等）
+
+命令 2:npm init vite@2.8.0
 
 3、項目名稱等 Setting：
 project name：XXX
