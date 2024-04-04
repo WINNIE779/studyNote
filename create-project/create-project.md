@@ -62,12 +62,21 @@ Step2:打開並初始化項目
 
 ￼![Alt text](<index.tsx Ihome.png>)
 
-（3）在 vite.config.ts 中配置為：
+（3）在 vite.config.ts 中配置,：
+
+（plugins：[react()]-表示这个插件通常是为了在 vite 项目中使用 react 框架）
+（resolve: { alias: { ... } }-指的是给导入的路径简化了，不需用@符号，可以直接用"./"来代替）
+（server: { port: 3000 }-指的是设置了访问服务器的端口号为“3000”）
+
 import path from "path";
 export default defineConfig({
+plugins:[react()],
+resolve:{
 alias: {
 "@": path.resolve(\_\_dirname, "./src"),
 },
+},
+server:{port:3000},
 });
 
 ￼![Alt text](<TS index.tsx .home.png>)
@@ -76,9 +85,14 @@ alias: {
 
 （5） tailwind.config.js 和 jspostcss.config.js 的生成：npx tailwindcss init -p
 
-（6）生成後，在 tailwind.config.js 中給 content 加入："./index.html", "./src/\*_/_.{js,ts,jsx,tsx}"
+（6）生成後，在 tailwind.config.js 中給配置：
+content：["./index.html", "./src/\*_/_.{js,ts,jsx,tsx}"]
+corePlugins: {
+preflight: false,
+},
+(加上这个可以取消 antd 自带的一些样式，后续可以自己手动写样式或重置样式)
 
-￼![Alt text](<JS tailwind.config.s 〉..png>)
+![Alt text](tailwind.png)
 
 （7）在根目录的 index.css 文件中添加以下，並試用 tailwind css；
 
