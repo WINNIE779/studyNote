@@ -93,3 +93,44 @@ return (
 };
 
 export default ThrottledInput;
+
+四、用 ahooks 的方法写防抖：
+
+防抖：useDebounce-是指对 set 的值添加防抖，而 useDebounceFn 是用与函数添加防抖；
+
+useDebounce：
+
+hook.ts:
+const [searchValue,setSearchValue]=useState<string>(“”);
+
+const debounceValue = useDebounce(searchValue,{wait:500});
+
+Index.tsx:
+
+<input value={value} onChange={(e)=>setValue(e.target.value) />
+
+useDebounceFn:
+
+export default () => {
+
+const [value, setValue] = useState(0);
+
+const { run } = useDebounceFn(() => {  
+setValue(value + 1);
+},
+{
+wait: 500,
+},
+);
+
+return (
+
+<div>
+<p style={{ marginTop: 16 }}> Clicked count: {value} </p>
+<button type="button" onClick={run}>
+Click fast!
+</button>
+</div>
+);};
+
+//在完成所有点击的 500 毫秒后执行一次，频繁调用 run（触发执行 fn，函数参数将会传递给 fn），cancel（可取消当前的防抖），flush（可立即调用当前防抖的函数）
