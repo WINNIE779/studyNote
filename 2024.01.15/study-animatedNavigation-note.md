@@ -20,8 +20,9 @@
 
 分为两部分：
 1、点击 button 后的处理；
-document.addEventListener("DOMContentLoaded", () => {
-//等完全加载并解析后再执行代码
+
+     document.addEventListener("DOMContentLoaded", () => {
+     //等完全加载并解析后再执行代码
 
        const toggleButton = document.getElementById("toggle");
        // 获取id=toggle的来切换按钮的DOM元素
